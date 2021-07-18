@@ -30,4 +30,4 @@ app.post('/register', (req, res) => {register.handleRegister(req, res, db, bcryp
 app.put('/image', (req, res) => {image.handleImage(req, res, db)} )
 app.post('/apicall', (req, res) => {image.handleApiCall(req, res)} )
 
-app.listen(3001);
+app.listen(process.env.PORT || 3001);
