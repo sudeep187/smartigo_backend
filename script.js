@@ -24,7 +24,6 @@ app.use( cors() );
 
 const saltRounds = 10;
 
-app.get('/', (req, res) => {res.send('working!!!!')})
 app.post('/signin', (req, res) => {signin.handleSignin(req, res, db, bcrypt, saltRounds)} )
 app.post('/register', (req, res) => {register.handleRegister(req, res, db, bcrypt, saltRounds)} ) 
 app.put('/image', (req, res) => {image.handleImage(req, res, db)} )
